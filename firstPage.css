@@ -86,12 +86,11 @@
       align-items: center;
       gap: 50px;
       /* text-align: center; */
-      height: 100vh;
+      
 
   }
   
   .container {
-      max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
   }
@@ -99,6 +98,7 @@
   .home {
       height: 100vh;
       color: #fff;
+      height: 100vh;
 
   }
   #contt{
@@ -106,7 +106,8 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        gap: 70px;
+        align-items: center;
+        gap: 100px;
         
 
   }
@@ -117,6 +118,7 @@
       margin-bottom: 10px;
       text-shadow: 0px 6px 20px aqua; 
       color: white;
+      transition: 1s;
       
 
   }
@@ -129,6 +131,7 @@
       font-size: 18px;
       margin-bottom: 20px;
       color: white;
+      transition: 1.5s;
   }
   
   .btn {
@@ -139,7 +142,7 @@
       border-radius: 5px;
       text-decoration: none;
       font-weight: 600;
-      transition: background-color 0.3s ease;
+      transition: background-color 1.5s ease;
   }
   
   .btn:hover {
@@ -151,12 +154,15 @@
     border-radius: 50%;
     width: 400px;
     height: 400px;
-    border:5px solid aqua;
+    border:5px dashed aqua;
     overflow: hidden;
+    
 
     /* object-fit: cover; */
     box-shadow: 0 4px 8px #2a9d8f, /* Subtle shadow */
-                0px 6px 40px aqua; /* Deeper shadow for depth */
+                0px 6px 40px aqua;
+                 /* Deeper shadow for depth */
+    transition: 2s;
     transition: box-shadow 0.3s ease;
   }
   .image:hover{
@@ -169,13 +175,34 @@
     width: 100%;
     height: 100%;
   }
-  
-  .about {
-    color:black;
+  .home .container{
+    height: 86vh;
+    width: 75%;
+    border: 2px solid rgb(88, 103, 170);
+    overflow: hidden;
+    border-radius: 15px;
+    backdrop-filter: blur(25px);
+    background-color: #0077b5;
+  }
+  .about .container{
+    color:rgb(243, 240, 240);
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content:start;
+    gap: 50px;
+    flex-wrap: wrap;
+
       
+  }
+  .imageabout{
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  .imageabout img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
   /* Basic styling for social icons */
 .social-icons {
@@ -184,6 +211,7 @@
 }
 
 .social-icons a {
+    margin: 20px 10px;
     display: inline-block;
     width: 40px;
     height: 40px;
@@ -236,7 +264,7 @@
   }
   
   .project-card {
-      background-color: #264653;
+      background-color: #75aec5;
       padding: 20px;
       border-radius: 10px;
       width: 300px;
@@ -244,7 +272,7 @@
   }
   
   .project-card h3 {
-      margin-bottom: 10px;
+    margin-bottom: 10px;
   }
   
   .contact {
@@ -314,5 +342,16 @@
       .burger {
           display: block;
       }
+  }
+  @media (max-width: 1700px){
+    #contt{
+      gap: 0px;
+    }
+    @media  (max-width: 1535px){
+        .image{
+            display: none;
+        }
+        
+  }
   }
   

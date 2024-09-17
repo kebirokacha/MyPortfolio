@@ -6,3 +6,4 @@ burger.addEventListener('click', () => {
     navLinks.classList.toggle('show');
 });
 
+console.log(`Width: ${window.screen.width}, Height: ${window.screen.height}`);
