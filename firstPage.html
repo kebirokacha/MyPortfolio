@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="firstPage.css">
+    <!-- AOS Animate On Scroll Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+    <!-- Animate.css for fallback basic animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -13,9 +17,9 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="navbar">
             <div class="logo">
-                <a href="#home">My Portfolio</a>
+                <a href="#home">Kebir Okacha</a>
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -24,34 +28,36 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
         </nav>
     </header>
 
-    <section id="home" class="section home">
-        <div class="container" id="contt">
-            <div id="childcontt"><h1>Hi, I'm <span class="highlight">kebir okacha abdel illah </span></h1>
-            <p>I'm a passionate developer who loves creating amazing web applications.</p>
-            <a href="#projects" class="btn">View My Work</a>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/61562614702519" class="facebook" target="_blank">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com" class="instagram" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com" class="linkedin" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content" data-aos="fade-right">
+                <h1>Hello, I'm <span class="accent">Kebir Okacha</span></h1>
+                <h2>Web Developer & ML Enthusiast</h2>
+                <p>I build modern web experiences and intelligent solutions.<br>Let’s make something amazing together.</p>
+                <a href="#projects" class="cta-btn">View My Work</a>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/61562614702519" class="facebook" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com" class="instagram" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com" class="linkedin" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
             </div>
-        </div>
-            <div class="image"><img src="image/myimag.jpg" alt=""></div>
-        </div>
-    </section>
+            <div class="hero-image" data-aos="fade-left">
+                <img src="image/myimag.jpg" alt="Kebir Okacha">
+            </div>
+        </section>
+        <!-- More sections (About, Projects, etc.) remain unchanged for now -->
+    </main>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <section id="about" class="section about">
         <div class="container">
@@ -98,20 +104,30 @@
             <p id="para">Here are some of the technologies and tools I work with:</p><br>
             <div class="skills-list">
                 <div class="skill-item">
+                    <i class="fab fa-html5 skill-icon html-icon" title="HTML5"></i>
+                    <i class="fab fa-css3-alt skill-icon css-icon" title="CSS3"></i>
                     <h3>HTML & CSS</h3>
                     <p>Building clean, responsive websites with modern HTML5 and CSS3.</p>
                 </div>
                 <div class="skill-item">
+                    <i class="fab fa-js skill-icon js-icon" title="JavaScript"></i>
                     <h3>JavaScript</h3>
                     <p>Adding interactivity and logic to web applications using vanilla JavaScript and frameworks like react .</p>
                 </div>
                 <div class="skill-item">
+                    <i class="fab fa-python skill-icon python-icon" title="Python"></i>
                     <h3>Python</h3>
                     <p>Writing back-end scripts, building web apps with Django, and automating tasks.</p>
                 </div>
                 <div class="skill-item">
+                    <i class="fas fa-database skill-icon db-icon" title="Databases"></i>
                     <h3>Databases</h3>
                     <p>Working with SQL and NoSQL databases like MySQL and MongoDB.</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-react skill-icon react-icon" title="React"></i>
+                    <h3>React js</h3>
+                    <p>working with react js  in some projects frent-end </p>
                 </div>
             </div>
         </div>
@@ -139,12 +155,16 @@
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 kebir okacha abde illah. All rights reserved.</p>
-        </div>
-    </footer>
-
     <script src="first.js"></script>
+    <!-- AOS Animate On Scroll JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({ once: true, duration: 1000 });
+    </script>
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2025 Kebir Okacha. All rights reserved.</p>
+      </div>
+    </footer>
 </body>
 </html>
