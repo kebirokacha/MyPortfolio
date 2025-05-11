@@ -13,7 +13,30 @@
   padding: 0;
   min-height: 100vh;
   letter-spacing: 0.02em;
+  overflow-x: hidden;
 }
+
+/* Animated bubbles background */
+.bubbles {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  background: rgba(0,255,240,0.10);
+  border-radius: 50%;
+  animation: floatUp 9s linear infinite;
+}
+@keyframes floatUp {
+  0% { transform: translateY(0) scale(1); opacity: 0.7; }
+  50% { opacity: 0.9; }
+  100% { transform: translateY(-110vh) scale(1.2); opacity: 0; }
+}
+
 
 /* Navbar Styles */
 .navbar {
@@ -951,12 +974,14 @@
 }
 
 .skill-item {
-    background-color: #f9f9f9;
-    border-radius: 10px;
+    background: linear-gradient(135deg, #00fff0 0%, #2a9d8f 100%);
+    color: #fff;
+    border-radius: 14px;
     padding: 20px;
     width: 200px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    box-shadow: 0 4px 24px rgba(0,255,240,0.15);
+    transition: transform 0.3s, background 0.3s;
+    border: 2px solid #00fff0;
 }
 
 .skill-item h3 {
